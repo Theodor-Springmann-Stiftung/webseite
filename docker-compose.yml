@@ -1,14 +1,12 @@
 services:
-  tsssite:
+  build:
     build:
       context: .
       dockerfile: Dockerfile
-    expose:
-      - "80"
-    restart: unless-stopped
-    networks:
-      - caddynet
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
 
-networks:
-  caddynet:
-    external: true
+volumes:
+  node_modules:
