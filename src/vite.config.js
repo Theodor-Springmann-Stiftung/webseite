@@ -11,9 +11,6 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         impressum: resolve(__dirname, "impressum", "index.html"),
-        ohne: resolve(__dirname, "ohne.html"),
-        bild: resolve(__dirname, "bild.html"),
-        below: resolve(__dirname, "below.html"),
       },
     },
   },
